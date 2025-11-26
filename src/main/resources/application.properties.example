@@ -1,0 +1,30 @@
+# Server Configuration
+server.port=8080
+spring.application.name=sistema-electoral-backend
+
+# Supabase Configuration
+# Reemplaza estos valores con tus credenciales de Supabase
+# Las encuentras en: Settings > API de tu proyecto Supabase
+supabase.url=https://tu-proyecto.supabase.co
+supabase.key=tu-anon-key-aqui
+supabase.service-key=tu-service-role-key-aqui
+
+# FastAPI Configuration
+fastapi.base-url=http://localhost:8000
+fastapi.reniec-endpoint=/api/reniec
+fastapi.timeout=30000
+
+# JWT Configuration
+jwt.secret=your-secret-key-change-this-in-production-minimum-256-bits
+jwt.expiration=86400000
+
+# CORS Configuration
+cors.allowed-origins=http://localhost:5173,http://localhost:3000
+cors.allowed-methods=GET,POST,PUT,DELETE,OPTIONS
+cors.allowed-headers=*
+cors.allow-credentials=true
+
+# Logging
+logging.level.com.elecciones=DEBUG
+logging.level.org.springframework.web=INFO
+

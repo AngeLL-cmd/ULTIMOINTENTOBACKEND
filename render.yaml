@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: sistema-electoral-backend
+    env: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/sistema-electoral-backend-1.0.0.jar
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: JAVA_OPTS
+        value: -Xmx512m -Xms256m
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: FACTILIZA_BASE_URL
+        sync: false
+      - key: FACTILIZA_ENDPOINT
+        sync: false
+      - key: FACTILIZA_API_KEY
+        sync: false
+      - key: FACTILIZA_TIMEOUT
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRATION
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: CORS_ALLOWED_METHODS
+        sync: false
+      - key: CORS_ALLOWED_HEADERS
+        sync: false
+      - key: CORS_ALLOW_CREDENTIALS
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+
